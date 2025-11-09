@@ -1,0 +1,29 @@
+data:
+  image_size: [512, 512]
+  max_bands: 13
+  coordinate_system: "EPSG:4326"
+
+computer_vision:
+  mineral_detection:
+    confidence_threshold: 0.7
+    model_input_size: [224, 224]
+  formation_analysis:
+    segmentation_threshold: 0.5
+    feature_dim: 256
+
+geospatial:
+  resolution: 30
+  buffer_distance: 1000
+  elevation_scale: 1.0
+
+geological_models:
+  mineral_prediction:
+    hidden_layers: [128, 256, 128]
+    learning_rate: 0.001
+  disaster_prediction:
+    time_window: 365
+    risk_threshold: 0.6
+
+api:
+  host: "0.0.0.0"
+  port: 8000
